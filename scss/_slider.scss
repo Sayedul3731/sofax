@@ -1,0 +1,135 @@
+.sofax-slider-section {
+  padding: 100px 0;
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1296px;
+  }
+}
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+.sofax-title-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+h4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--heading-color);
+  font-weight: 700;
+  margin: 0;
+}
+h4 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+.slider-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: calc(100% * 2);
+  animation: scroll 45s linear infinite;
+
+  .slide {
+    min-width: calc(100% / 6);
+    box-sizing: border-box;
+    padding: 10px;
+
+    img {
+      width: 50%;
+      display: block;
+      border-radius: 10px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .sofax-slider-section {
+    padding-top: 5px;
+  }
+  h4 {
+    margin-right: 24px;
+    margin-bottom: -30px;
+  }
+  .slider-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    width: calc(100% * 5);
+    animation: scroll 45s linear infinite;
+
+    .slide {
+      min-width: calc(100% / 6);
+      box-sizing: border-box;
+      padding: 10px;
+
+      img {
+        width: 70%;
+        display: block;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .sofax-slider-section {
+    padding-top: 10px;
+  }
+  h4 {
+    margin-bottom: -10px;
+  }
+  .slider-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    width: calc(100% * 2);
+    animation: scroll 45s linear infinite;
+
+    .slide {
+      min-width: calc(100% / 5);
+      box-sizing: border-box;
+      padding: 10px;
+
+      img {
+        width: 80%;
+        display: block;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+/* Keyframe animation for smooth continuous scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
